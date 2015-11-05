@@ -1,0 +1,11 @@
+
+---
+- target: hello
+  type: exe
+  sources:
+  	- hello.c
+  dependencies: [ world ]
+
+- target: world
+  type: lib
+  sources: [ world.c ]
