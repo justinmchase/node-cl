@@ -1,5 +1,4 @@
 
----
 - target: hello
   type: exe
   sources:
