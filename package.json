@@ -4,7 +4,7 @@
   "description": "Node clang build driver.",
   "main": "index.js",
   "bin": {
-    "ncb": "./bin/ncb.js"
+    "ncb": "./bin/ncb"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

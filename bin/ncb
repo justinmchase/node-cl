@@ -1,0 +1,11 @@
+#!/bin/bash
+
+DIR=`dirname $0`
+
+if [ -f ./node_modules/node_modules/node-clang-build/bin/ncb.js ]; then
+	node ./node_modules/node_modules/node-clang-build/bin/ncb.js
+else
+	node $DIR/ncb.js
+fi
+
+exit $?
