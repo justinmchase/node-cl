@@ -4,5 +4,5 @@
 int main(int argc, char **argv) {
 	printf("hello ");
 	printf("%s", get_world());
-	printf("\n"); 
-}
+	printf("\n");
+} 

@@ -6,22 +6,20 @@ require('colors');
 var build = new Builder(argv);
 build.on('error', onBuildError);
 build.on('success', onSuccess);
-build.on('change', onChange);
 build.on('done', onDone);
 build.run();
 
 function onBuildError(err) {
+	console.log();
+	console.error('Build ' + 'Error'.red + ':');
 	console.error(err);
-}
-
-function onChange() {
-	console.log('Build ' + 'Change'.yellow + ' detected...');
 	console.log();
 }
 
 function onSuccess() {
 	console.log();
 	console.log('Build ' + 'Succeeded'.green + '.');
+	console.log();
 }
 
 function onDone(code) {
