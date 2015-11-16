@@ -1,4 +1,5 @@
 var argv = require('minimist')(process.argv.slice(2));
+var util = require('util');
 var Builder = require('../lib/builder');
 
 require('colors');
@@ -13,7 +14,8 @@ build.run();
 
 function onBuildError(err) {
 	console.log();
-	console.error('[' + 'error'.red + ']:', err);
+	console.error('[' + 'error'.red + ']: ');
+	console.error(err.stack || err);
 	console.log();
 }
 
