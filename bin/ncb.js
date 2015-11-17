@@ -31,7 +31,6 @@ function onWarning(message) {
 }
 
 function onInfo(message) {
-	console.log();
 	console.log('[' + 'info'.blue + ']: ' + message);
 }
 
