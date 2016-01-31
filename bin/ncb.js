@@ -14,14 +14,13 @@ build.run();
 
 function onBuildError(err) {
 	console.log();
-	console.error('[' + 'error'.red + ']: ');
-	console.error(err.stack || err);
+	console.log('[' + 'error'.red + ']: ' + err);
 	console.log();
 }
 
 function onSuccess() {
 	console.log();
-	console.log('Build ' + 'Succeeded'.green + '.');
+	console.log('Build [' + 'succeeded'.green + '].');
 	console.log();
 }
 
@@ -37,7 +36,7 @@ function onInfo(message) {
 function onDone(code) {
 	console.log();
 	if (code !== 0) {
-		console.log('Build ' + 'Failed'.red + '.');
+		console.log('Build [' + 'failed'.red + '].');
 	}
 	process.exit(code);
 }

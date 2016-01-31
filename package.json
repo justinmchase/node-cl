@@ -20,8 +20,7 @@
     "colors": "^1.1.2",
     "js-yaml": "^3.4.3",
     "minimist": "^1.2.0",
-    "windows-registry": "^0.1.0",
-    "winreg": "0.0.12"
+    "winreg": "^0.0.13"
   },
   "devDependencies": {
     "chai": "^3.4.0",
