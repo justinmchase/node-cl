@@ -3,8 +3,10 @@
   type: exe
   sources:
   	- hello.c
-  dependencies: [ world ]
+  dependencies:
+    - world
 
 - target: world
   type: lib
-  sources: [ world.c ]
+  sources:
+    - world.c

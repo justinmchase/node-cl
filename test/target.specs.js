@@ -9,12 +9,12 @@ var fs = require('fs')
 var path = require('path')
 var yaml = require('js-yaml')
 var expect = require('chai').expect
-var Target = require('../lib/target').Target
+var find = require('../lib/target').find
 
 function testTarget (name, expected) {
   var data = fs.readFileSync(path.join(__dirname, 'targets', `${name}.yml`), 'utf8')
   var parsed = yaml.load(data)
-  var found = Target.find(parsed)
+  var found = find(parsed)
 
   expect(found).to.deep.equal(expected)
 }

@@ -7,13 +7,14 @@
     "ncb": "./bin/ncb"
   },
   "scripts": {
-    "test": "mocha test/**/*.specs.js",
-    "watch": "mocha --watch",
+    "test": "mocha **/*.specs.js",
+    "watch": "mocha --watch **/*.specs.js",
     "lint": "standard"
   },
   "keywords": [
     "clang"
   ],
+  "repository": "https://github.com/justinmchase/node-clang-build",
   "author": "justin.m.chase@gmail.com",
   "license": "MIT",
   "standard": {
@@ -23,20 +24,22 @@
     }
   },
   "dependencies": {
-    "argv-split": "^0.1.1",
-    "async": "^1.5.0",
+    "argv": "0.0.2",
+    "argv-split": "^1.0.1",
+    "async": "^2.0.1",
     "babel-core": "^6.14.0",
     "babel-preset-es2015": "^6.14.0",
     "colors": "^1.1.2",
-    "js-yaml": "^3.4.3",
+    "debug": "^2.2.0",
+    "js-yaml": "^3.6.1",
     "lodash": "^4.15.0",
-    "minimist": "^1.2.0",
-    "winreg": "^0.0.13"
+    "sha1": "^1.1.1",
+    "winreg": "^1.2.2"
   },
   "devDependencies": {
-    "chai": "^3.4.0",
-    "mocha": "^2.3.3",
-    "sinon": "^1.17.2",
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2",
+    "sinon": "^1.17.5",
     "standard": "^8.0.0"
   }
 }
