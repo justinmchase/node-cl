@@ -1,5 +1,7 @@
 require('colors')
-require('babel-core/register')
+require('babel-core/register')({
+  presets: [ 'es2015' ]
+})
 
 var argv = require('minimist')(process.argv.slice(2))
 var Builder = require('../lib').Builder

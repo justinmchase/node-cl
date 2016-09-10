@@ -1,20 +1,22 @@
 {
-  "name": "ncb",
+  "name": "node-cl",
   "version": "0.0.1",
-  "description": "Node clang build driver.",
-  "main": "index.js",
+  "description": "Node, C/C++ language build tool",
+  "main": "bin/ncl.js",
   "bin": {
-    "ncb": "./bin/ncb"
+    "ncl": "bin/ncl"
   },
   "scripts": {
-    "test": "mocha **/*.specs.js",
-    "watch": "mocha --watch **/*.specs.js",
-    "lint": "standard"
+    "test": "gulp test",
+    "watch": "gulp watch",
+    "lint": "gulp lint"
   },
   "keywords": [
-    "clang"
+    "c/c++",
+    "cl",
+    "build"
   ],
-  "repository": "https://github.com/justinmchase/node-clang-build",
+  "repository": "https://github.com/justinmchase/node-cl",
   "author": "justin.m.chase@gmail.com",
   "license": "MIT",
   "standard": {
@@ -38,7 +40,12 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-cucumber": "0.0.22",
     "mocha": "^3.0.2",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.2.2",
     "sinon": "^1.17.5",
     "standard": "^8.0.0"
   }
