@@ -16,32 +16,26 @@ build.on('done', ondone)
 build.run()
 
 function onwarning (message) {
-  console.log()
   console.log('[' + 'warning'.yellow + ']: ' + message)
 }
 
 function onerror (err) {
-  console.log()
   console.log('[' + 'error'.red + ']: ' + err)
-  console.log()
 }
 
 function onstart () {
   console.log('Build [' + 'starting'.blue + ']')
 }
 
-function onnext (event) {
-  console.log('  building [' + event.target.name.magenta + ']...')
+function onnext (target) {
+  console.log('  target [' + target.name.magenta + ']...')
 }
 
 function onsuccess () {
-  console.log()
   console.log('Build [' + 'success'.green + ']')
-  console.log()
 }
 
 function ondone (code) {
-  console.log()
   if (code !== 0) {
     console.log('Build [' + 'failed'.red + '].')
   }

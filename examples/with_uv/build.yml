@@ -1,0 +1,11 @@
+
+target: 'with_uv'
+type: exe
+includes:
+	- deps/{platform}/{architecture}/libuv/include
+libraries:
+	- deps/{platform}/{architecture}/libuv/libuv.lib
+sources:
+	- main.c
+after_build:
+	- bin/after_build.sh

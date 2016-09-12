@@ -10,3 +10,4 @@ Feature: Integration Tests
       | name        |
       | hello       |
       | two_targets |
+      | with_uv     |
