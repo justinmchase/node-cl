@@ -4,7 +4,7 @@
   "description": "Node, C/C++ language build tool",
   "main": "bin/ncl.js",
   "bin": {
-    "ncl": "bin/ncl"
+    "ncl": "bin/ncl.js"
   },
   "scripts": {
     "test": "gulp test",

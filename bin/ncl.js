@@ -1,3 +1,4 @@
+#!/bin/bash
 require('colors')
 require('babel-core/register')({
   presets: [ 'es2015' ]
@@ -11,6 +12,7 @@ build.on('warning', onwarning)
 build.on('error', onerror)
 build.on('start', onstart)
 build.on('next', onnext)
+build.on('executing', onexecuting)
 build.on('success', onsuccess)
 build.on('done', ondone)
 build.run()
@@ -29,6 +31,10 @@ function onstart () {
 
 function onnext (target) {
   console.log('  target [' + target.name.magenta + ']...')
+}
+
+function onexecuting (cmd) {
+  console.log(`  executing [${cmd.magenta}]...`)
 }
 
 function onsuccess () {
