@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env node
 require('colors')
 require('babel-core/register')({
   presets: [ 'es2015' ]
