@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 require('colors')
-require('babel-core/register')({
-  presets: [ 'es2015' ]
+require('@babel/register')({
+  presets: [ '@babel/env' ]
 })
+require('@babel/polyfill')
 
 var argv = require('minimist')(process.argv.slice(2))
 var Builder = require('../lib').Builder

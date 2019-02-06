@@ -1,12 +1,15 @@
 import gulp from 'gulp'
 import cucumber from 'gulp-cucumber'
 
-gulp.task('test', () => {
+export function test() {
   return gulp
     .src('lib/features/**/*.feature')
     .pipe(cucumber({
       support: 'lib/features/support/world.js',
       steps: 'lib/features/steps/**/*.js',
-      format: 'pretty'
+      format: 'summary',
+      emitErrors: false
     }))
-})
+}
+
+gulp.task('test', test)

@@ -2,8 +2,8 @@
 
 DIR=`dirname $0`
 
-if [ -f ./node_modules/node-clang-build/bin/ncl.js ]; then
-	node ./node_modules/node-clang-build/bin/ncl.js $*
+if [ -f ./node_modules/node-cl/bin/ncl.js ]; then
+	node ./node_modules/node-cl/bin/ncl.js $*
 else
 	node $DIR/ncl.js $*
 fi

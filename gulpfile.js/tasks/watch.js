@@ -1,7 +1,9 @@
 import gulp from 'gulp'
-import runSequence from 'run-sequence'
+import { test } from './test'
 
-gulp.task('watch', () => {
-  gulp.watch(['lib/**/*', 'examples/**/*', 'gulpfile.js/**/*'], ['test'])
-  runSequence(['test'])
-})
+function watch () {
+  gulp.watch(['lib/**/*', 'examples/**/*', 'gulpfile.js/**/*'], test)
+  return test()
+}
+
+gulp.task('watch', watch)
