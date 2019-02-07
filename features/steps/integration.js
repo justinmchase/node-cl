@@ -1,9 +1,9 @@
 import path from 'path'
 import { expect } from 'chai'
-import { Builder } from '../../builder'
+import { Builder } from '../../lib/builder'
 import { Given, When, Then } from 'cucumber'
 
-const examplesDir = path.resolve(__dirname, '..', '..', '..', 'examples')
+const examplesDir = path.resolve(__dirname, '..', '..', 'examples')
 
 Given('The {word} example project', function (name) {
   let opts = {

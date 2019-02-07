@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import yaml from 'js-yaml'
 import { expect } from 'chai'
-import { find } from '../../target'
+import { find } from '../../lib/target'
 import { Given, Then } from 'cucumber'
 
 const targetsDir = path.join(__dirname, '..', 'targets')

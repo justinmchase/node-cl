@@ -3,10 +3,10 @@ import cucumber from 'gulp-cucumber'
 
 export function test() {
   return gulp
-    .src('lib/features/**/*.feature')
+    .src('features/**/*.feature')
     .pipe(cucumber({
-      support: 'lib/features/support/world.js',
-      steps: 'lib/features/steps/**/*.js',
+      support: 'features/support/world.js',
+      steps: 'features/steps/**/*.js',
       format: 'summary',
       emitErrors: false
     }))
