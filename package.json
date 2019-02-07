@@ -1,5 +1,5 @@
 {
-  "name": "node-cl",
+  "name": "@justinmchase/ncl",
   "version": "0.0.1",
   "description": "Node, C/C++ language build tool",
   "main": "bin/ncl.js",
