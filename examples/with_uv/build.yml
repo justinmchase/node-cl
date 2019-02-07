@@ -2,10 +2,13 @@
 target: 'with_uv'
 type: exe
 includes:
-	- deps/{platform}/{architecture}/libuv/include
+  - deps/{platform}/{architecture}/libuv/include
 libraries:
-	- deps/{platform}/{architecture}/libuv/libuv.lib
+  - deps/{platform}/{architecture}/libuv/libuv.lib
 sources:
-	- main.c
+  - main.c
 after_build:
-	- bin/after_build.sh
+  win32: bin/after_build.bat
+  linux: bin/after_build.sh
+  darwin:
+    - bin/after_build.sh

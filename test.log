@@ -1,0 +1,54 @@
+
+> node-cl@0.0.1 test D:\code\node-cl
+> gulp test
+
+[[90m21:01:40[39m] Using gulpfile D:\code\node-cl\gulpfile.js
+[[90m21:01:40[39m] Starting 'test'...
+2019-02-07T03:01:41.828Z node-cl 
+2019-02-07T03:01:41.828Z node-cl > cl /FoC:\Users\justi\AppData\Local\Temp\0dbb9c30-ddbc-4c76-8842-fb7dc39a4726\hello\obj\debug\x64\hello\ /nologo /c D:\code\node-cl\examples\hello\hello.c
+--------------------------
+where cl: C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\bin\Hostx64\x64\cl.exe
+
+--------------------------
+hello.c
+2019-02-07T03:01:42.234Z node-cl undefined
+2019-02-07T03:01:42.234Z node-cl > lib /nologo C:\Users\justi\AppData\Local\Temp\0dbb9c30-ddbc-4c76-8842-fb7dc39a4726\hello\obj\debug\x64\hello\hello.obj /out:C:\Users\justi\AppData\Local\Temp\0dbb9c30-ddbc-4c76-8842-fb7dc39a4726\hello\hello.lib
+2019-02-07T03:01:42.291Z node-cl 
+2019-02-07T03:01:42.291Z node-cl > cl /FoC:\Users\justi\AppData\Local\Temp\0dbb9c30-ddbc-4c76-8842-fb7dc39a4726\two_targets\obj\debug\x64\world\ /nologo /c D:\code\node-cl\examples\two_targets\world.c
+--------------------------
+where cl: C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\bin\Hostx64\x64\cl.exe
+
+--------------------------
+world.c
+2019-02-07T03:01:42.466Z node-cl undefined
+2019-02-07T03:01:42.466Z node-cl > lib /nologo C:\Users\justi\AppData\Local\Temp\0dbb9c30-ddbc-4c76-8842-fb7dc39a4726\two_targets\obj\debug\x64\world\world.obj /out:C:\Users\justi\AppData\Local\Temp\0dbb9c30-ddbc-4c76-8842-fb7dc39a4726\two_targets\world.lib
+2019-02-07T03:01:42.508Z node-cl 
+2019-02-07T03:01:42.508Z node-cl > cl /FoC:\Users\justi\AppData\Local\Temp\0dbb9c30-ddbc-4c76-8842-fb7dc39a4726\two_targets\obj\debug\x64\hello\ /nologo /c D:\code\node-cl\examples\two_targets\hello.c
+--------------------------
+where cl: C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\bin\Hostx64\x64\cl.exe
+
+--------------------------
+hello.c
+2019-02-07T03:01:42.699Z node-cl 
+2019-02-07T03:01:42.699Z node-cl > cl /nologo C:\Users\justi\AppData\Local\Temp\0dbb9c30-ddbc-4c76-8842-fb7dc39a4726\two_targets\obj\debug\x64\hello\hello.obj C:\Users\justi\AppData\Local\Temp\0dbb9c30-ddbc-4c76-8842-fb7dc39a4726\two_targets\world.lib /MDd /Zi /Fe:C:\Users\justi\AppData\Local\Temp\0dbb9c30-ddbc-4c76-8842-fb7dc39a4726\two_targets\hello.exe
+--------------------------
+where cl: C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\bin\Hostx64\x64\cl.exe
+
+--------------------------
+2019-02-07T03:01:43.309Z node-cl 
+2019-02-07T03:01:43.309Z node-cl > cl /FoC:\Users\justi\AppData\Local\Temp\0dbb9c30-ddbc-4c76-8842-fb7dc39a4726\with_uv\obj\debug\x64\with_uv\ /nologo /c /I D:\code\node-cl\examples\with_uv\deps\win32\x64\libuv\include D:\code\node-cl\examples\with_uv\main.c
+--------------------------
+where cl: C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\bin\Hostx64\x64\cl.exe
+
+--------------------------
+main.c
+2019-02-07T03:01:43.780Z node-cl 
+2019-02-07T03:01:43.780Z node-cl > cl /nologo C:\Users\justi\AppData\Local\Temp\0dbb9c30-ddbc-4c76-8842-fb7dc39a4726\with_uv\obj\debug\x64\with_uv\main.obj D:\code\node-cl\examples\with_uv\deps\win32\x64\libuv\libuv.lib /MDd /Zi /Fe:C:\Users\justi\AppData\Local\Temp\0dbb9c30-ddbc-4c76-8842-fb7dc39a4726\with_uv\with_uv.exe
+--------------------------
+where cl: C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\bin\Hostx64\x64\cl.exe
+
+--------------------------
+bin/after_build.sh
+[[90m21:01:44[39m] The following tasks did not complete: test
+[[90m21:01:44[39m] Did you forget to signal async completion?
+npm ERR! Test failed.  See above for more details.
