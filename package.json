@@ -1,6 +1,6 @@
 {
   "name": "@justinmchase/ncl",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Node, C/C++ language build tool",
   "main": "build/lib",
   "bin": {
