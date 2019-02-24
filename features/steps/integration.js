@@ -10,6 +10,7 @@ Given('The {word} example project', function (name) {
     rootdir: path.join(examplesDir, name),
     outdir: path.join(this.tmpdir, name)
   }
+  console.log('building:', opts)
   this.builder = new Builder(opts)
   this.builder.on('error', err => console.error(err))
 })

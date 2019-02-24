@@ -1,0 +1,25 @@
+sudo: false
+dist: trusty
+
+language: node_js
+node_js:
+  - "11"
+
+install:
+  - npm i
+
+script:
+  # npm test -- todo: run on linux
+  - npm lint
+
+jobs:
+  include:
+    - stage: npm deploy
+      node_js: "11"
+      deploy:
+        provider: npm
+        api_key: $NPM_API_KEY
+        skip_cleanup: true
+        tag: next
+        on:
+          tags: true

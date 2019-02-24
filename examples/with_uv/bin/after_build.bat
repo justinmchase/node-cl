@@ -1,1 +1,0 @@
-cp deps\%platform%\%architecture%\libuv\libuv.dll %outdir%\libuv.dll

@@ -2,14 +2,16 @@
   "name": "@justinmchase/ncl",
   "version": "0.0.2",
   "description": "Node, C/C++ language build tool",
-  "main": "bin/ncl.js",
+  "main": "build/lib",
   "bin": {
     "ncl": "bin/ncl.js"
   },
   "scripts": {
     "test": "gulp test",
     "watch": "gulp watch",
-    "lint": "gulp lint"
+    "lint": "gulp lint",
+    "build": "gulp build",
+    "clean": "gulp clean"
   },
   "keywords": [
     "c/c++",
@@ -25,11 +27,11 @@
       "mocha": true
     }
   },
+  "files": [
+    "bin",
+    "build/lib"
+  ],
   "dependencies": {
-    "@babel/core": "7.2.2",
-    "@babel/polyfill": "7.2.5",
-    "@babel/preset-env": "7.3.1",
-    "@babel/register": "7.0.0",
     "argv": "0.0.2",
     "argv-split": "2.0.1",
     "async": "2.6.1",
@@ -41,15 +43,26 @@
     "winreg": "1.2.4"
   },
   "devDependencies": {
+    "@babel/core": "7.3.3",
+    "@babel/polyfill": "7.2.5",
+    "@babel/preset-env": "7.3.1",
+    "@babel/register": "7.0.0",
     "chai": "4.2.0",
-    "cucumber": "3.2.1",
+    "cucumber": "5.1.0",
     "del": "3.0.0",
     "eslint": "5.13.0",
     "gulp": "4.0.0",
+    "gulp-babel": "8.0.0",
+    "gulp-cli": "2.0.1",
+    "gulp-concat": "2.6.1",
     "gulp-cucumber": "0.0.23",
-    "mocha": "5.2.0",
+    "gulp-require-uncache": "0.1.0",
+    "gulp-sourcemaps": "2.6.5",
+    "gulp-util": "3.0.8",
+    "mocha": "6.0.1",
     "require-dir": "1.2.0",
-    "sinon": "7.2.3",
+    "sinon": "7.2.4",
+    "source-map-support": "0.5.10",
     "standard": "12.0.1",
     "uuid": "3.3.2"
   }

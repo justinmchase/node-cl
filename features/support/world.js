@@ -1,15 +1,12 @@
-require('@babel/register')({
-  presets: [ '@babel/env' ]
-})
-require('@babel/polyfill')
+import 'source-map-support/register'
+import path from 'path'
+import del from 'del'
+import uuid from 'uuid/v4'
+import debug from 'debug'
+import { AfterAll, setWorldConstructor } from 'cucumber'
 
-var path = require('path')
-var os = require('os')
-var del = require('del')
-var uuid = require('uuid/v4')
-var { AfterAll, BeforeAll, setWorldConstructor } = require('cucumber');
-
-const tmpdir = path.join(os.tmpdir(), uuid())
+const tmpdir = path.resolve(path.join('build', 'tmp', uuid()))
+const log = debug('ncl')
 
 class World {
   constructor({ attach, parameters }) {
@@ -19,8 +16,12 @@ class World {
   }
 }
 
-AfterAll (function () {
-  return del(tmpdir, { force: true })
+AfterAll(function () {
+  if (!log.enabled) {
+    return del([tmpdir], { force: true })
+  } else {
+    log('Test output:', tmpdir)
+  }
 })
 
 setWorldConstructor(World)

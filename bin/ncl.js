@@ -1,12 +1,7 @@
 #!/usr/bin/env node
 require('colors')
-require('@babel/register')({
-  presets: [ '@babel/env' ]
-})
-require('@babel/polyfill')
-
 var argv = require('minimist')(process.argv.slice(2))
-var Builder = require('../lib').Builder
+var Builder = require('../build/lib').Builder
 
 var build = new Builder(argv)
 build.on('warning', onwarning)

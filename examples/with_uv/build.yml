@@ -8,7 +8,6 @@ libraries:
 sources:
   - main.c
 after_build:
-  win32: bin/after_build.bat
-  linux: bin/after_build.sh
-  darwin:
-    - bin/after_build.sh
+  - cp:
+      from: deps/{platform}/{architecture}/libuv/libuv.dll
+      to: "{outdir}/libuv.dll"
