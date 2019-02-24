@@ -10,7 +10,7 @@ install:
 
 script:
   # npm test -- todo: run on linux
-  - npm lint
+  - echo "todo test..."
 
 jobs:
   include:
