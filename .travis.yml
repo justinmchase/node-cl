@@ -9,9 +9,9 @@ install:
   - npm i
 
 script:
-  # npm test -- todo: run on linux
-  - echo "todo test..."
-
+  - npm run build
+  # todo: npm test on linux
+ 
 jobs:
   include:
     - stage: npm deploy
